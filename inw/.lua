@@ -129,8 +129,6 @@ local args = {
     [2] = "Special"
 }
 game:GetService("ReplicatedStorage").Networking.Units.SummonEvent:FireServer(unpack(args))
-wait(20)
-_G.spin = false
 end
 while _G.tp do wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-409.11505126953125, 40.32579040527344, 717.06884765625)
