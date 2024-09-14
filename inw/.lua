@@ -1,3 +1,5 @@
+_G.spin = true
+
 local args = {
     [1] = "Toggle",
     [2] = "Epic"
@@ -18,7 +20,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Networking.Settings.SettingsEvent:FireServer(unpack(args))
-while wait() do
 local args = {
     [1] = "Select",
     [2] = "Luffo"
@@ -122,6 +123,7 @@ local args = {
 
 game:GetService("ReplicatedStorage").Networking.CodesEvent:FireServer(unpack(args))
 wait(0.1)
+while _G.spin do wait()
 local args = {
     [1] = "SummonTen",
     [2] = "Special"
