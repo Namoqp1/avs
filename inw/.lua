@@ -1,5 +1,5 @@
 _G.spin = true
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-409.11505126953125, 40.32579040527344, 717.06884765625)
+_G.tp = true
 local args = {
     [1] = "Toggle",
     [2] = "Epic"
@@ -128,8 +128,10 @@ local args = {
     [1] = "SummonTen",
     [2] = "Special"
 }
-
 game:GetService("ReplicatedStorage").Networking.Units.SummonEvent:FireServer(unpack(args))
-    wait(20)
-    _G.spin = false
+wait(20)
+_G.spin = false
+end
+while _G.tp do wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-409.11505126953125, 40.32579040527344, 717.06884765625)
 end
